@@ -41,7 +41,7 @@ begin
 }
 	solid:=false;
 	hide:=true;
-	aside:=30;
+	aside:=50;
 	pause:=1;
 	step:=4;
 
@@ -77,7 +77,7 @@ begin
 
 	a.init(0,0,0,hide);
 
-	cube(a,aside,solid);
+	dodecaeder(a,aside,solid);
 
 	aangle:=grad2rad(step);
 	acosa:=cos(aangle);
@@ -101,7 +101,7 @@ begin
 			a.display(false);
 			a.moveto(c1,c2,c3);
 			a.display(false);
-         if turnx then a.xturn(acosa,asina);
+                        if turnx then a.xturn(acosa,asina);
 			if turny then a.yturn(acosa,asina);
 			if turnz then a.zturn(acosa,asina);
 			if da1>0 then begin
@@ -180,7 +180,7 @@ begin
 			a.display(true);
 			a.moveto(c1,c2,c3);
 			a.display(true);
-         delay(pause);
+                        delay(pause);
 		until keypressed;
 		inchar := readkey;
 		if inchar = 'x' then turnx:=not(turnx);
